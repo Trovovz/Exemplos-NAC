@@ -1,0 +1,26 @@
+# JUnit BoasVindas
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class BoasVindasTeste {
+
+	@Test
+	public void testeExibirMensagem() {
+		String mensagem = "Guilherme Trovo";
+		String resultadoEsperado = "Guilherme Trovo";
+		BoasVindas boasVindas = new BoasVindas(mensagem);
+		String resultadoReal = boasVindas.exibirMensagem();
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+
+	@Test
+	void testeCompletarMensagem() {
+		String mensagem = "Olá! Seja bem vindo a sua calculadora pessoal";
+		BoasVindas boasVindas = new BoasVindas(mensagem);
+		String resultadoReal = boasVindas.completarMensagem();
+		assertEquals(mensagem, resultadoReal);
+	}
+
+}
