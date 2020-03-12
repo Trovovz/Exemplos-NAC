@@ -1,0 +1,45 @@
+# JUnit calculadora
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalculadoraTeste {
+
+	@Test
+	public void testeSomar() {
+		int valor1 = 9, valor2 = 4;
+		int resultadoEsperado = 13;
+		Calculadora calculadora = new Calculadora();
+		int resultadoReal = calculadora.somar(valor1, valor2);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	
+	@Test
+	public void testeSubtrair() {
+		int valor1 = 7, valor2 = 12;
+		int resultadoEsperado = -5;
+		Calculadora calculadora = new Calculadora();
+		int resultadoReal = calculadora.subtrair(valor1, valor2);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	
+	@Test
+	public void testeMultiplicar() {
+		int valor1 = 6, valor2 = 4;
+		int resultadoEsperado = 24;
+		Calculadora calculadora = new Calculadora();
+		int resultadoReal = calculadora.multiplicar(valor1, valor2);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	
+	@Test
+	public void testeDividir() {
+		int valor1 = 81, valor2 = 9;
+		int resultadoEsperado = 4;
+		Calculadora calculadora = new Calculadora();
+		int resultadoReal = calculadora.dividir(valor1, valor2);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+
+}
