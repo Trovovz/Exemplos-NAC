@@ -1,0 +1,34 @@
+# JUnit ProdutoTest
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ProdutoTeste { 
+
+	@Test
+	public void testeGetPeso() {
+		double peso = 59.30;
+		Produto produto = new Produto();
+		produto.setPeso(peso);
+		assertEquals(59.30, produto.getPeso());
+	}
+	
+	@Test
+	public void testeGetAltura() {
+		double altura = 1.81;
+		Produto produto = new Produto();
+		produto.setAltura(altura);
+		assertEquals(1.81, produto.getAltura());
+	}
+	
+	@Test
+	public void testeSetPeso() {
+		double peso = 28.1;
+		Produto produto = new Produto();
+		produto.setPeso(peso);
+		produto.setPeso(8293.3);
+		assertEquals(8293.3, produto.getPeso());
+	}
+
+}
